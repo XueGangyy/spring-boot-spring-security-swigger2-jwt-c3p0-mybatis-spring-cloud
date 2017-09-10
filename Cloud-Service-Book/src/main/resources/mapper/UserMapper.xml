@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ynu.yuyue.cloud.bookservice.mapper.UserMapper">
+
+    <!-- 定义数据库字段与实体对象的映射关系 -->
+    <resultMap type="User" id="userResultMap">
+        <id property="userEmail" column="user_email"/>
+        <result property="userName" column="user_name"/>
+        <result property="userPassword" column="user_password"/>
+        <result property="userTelephone" column="user_telephone"/>
+        <result property="userAddress" column="user_address"/>
+        <result property="userGood" column="user_good"/>
+        <result property="userTrust" column="user_trust"/>
+    </resultMap>
+
+</mapper>

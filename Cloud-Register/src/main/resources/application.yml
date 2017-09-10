@@ -1,0 +1,12 @@
+server:
+  port: 8761
+eureka:
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 3
+  client:
+    registerWithEureka: false  #是否将eureka自身作为应用注册到eureka注册中心
+    fetchRegistry: false       #为true时，可以启动，但报异常：Cannot execute request on any known server
+    serviceUrl:
+      defaultZone: ${EUREKA_DEFAULT_ZONE:http://localhost:${server.port}/eureka/}
